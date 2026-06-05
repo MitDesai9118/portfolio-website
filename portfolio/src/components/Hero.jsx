@@ -40,7 +40,7 @@ const Hero = () => {
           </p>
 
           <div className="hero-actions fade-in-up delay-400">
-            <a href="http://localhost:5000/api/download/resume" download className="btn btn-primary">
+            <a href="/Mit_Desai_Resume.pdf" download className="btn btn-primary">
               Download Resume
             </a>
             <a href="#projects" onClick={handleViewWorkClick} className="btn btn-outline btn-explore">
@@ -110,7 +110,7 @@ const Hero = () => {
                   <a href="https://www.linkedin.com/in/mitdesai9118/" target="_blank" rel="noreferrer" className="mini-tag blue clickable-tag" title="LinkedIn">
                     <FaLinkedin className="tag-icon" /> LinkedIn
                   </a>
-                  <a href="http://localhost:5000/api/download/resume" download className="mini-tag purple clickable-tag" title="Download Resume">
+                  <a href="/Mit_Desai_Resume.pdf" download className="mini-tag purple clickable-tag" title="Download Resume">
                     <FaDownload className="tag-icon" /> Resume
                   </a>
                 </div>
