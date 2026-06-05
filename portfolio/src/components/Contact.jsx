@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaPaperPlane } from 'react-icons/fa';
+import { FaMapMarkerAlt, FaEnvelope, FaPaperPlane } from 'react-icons/fa';
 import './Contact.css';
 
 const Contact = () => {
@@ -8,7 +8,7 @@ const Contact = () => {
       <div className="container">
         <h2 className="section-title reveal-on-scroll">Get In Touch</h2>
         <div className="contact-content">
-          {/* Left Console: Contact Information */}
+          {/* Left Panel: Contact Information */}
           <div className="console-window contact-info-window reveal-on-scroll delay-100">
             <div className="console-header">
               <div className="console-dots">
@@ -17,38 +17,52 @@ const Contact = () => {
                 <span className="console-dot green"></span>
               </div>
               <div className="console-title">identity.info</div>
-              <div className="console-status">// read-only</div>
+              <div className="console-status">active</div>
             </div>
             <div className="console-body info-body">
-              <div className="cli-line comment">// contact details</div>
-              
-              <div className="cli-line">
-                <span className="prompt">mit@desai-pc:~$</span> get-location
+              <div className="contact-info-section">
+                <h3 className="contact-info-title">Contact Info</h3>
+                
+                <div className="contact-info-item">
+                  <FaMapMarkerAlt className="info-icon green-text" />
+                  <div className="info-text">
+                    <span className="info-label">Location</span>
+                    <span className="info-value">Bangalore, India</span>
+                  </div>
+                </div>
+                
+                <div className="contact-info-item">
+                  <FaEnvelope className="info-icon cyan-text" />
+                  <div className="info-text">
+                    <span className="info-label">Email</span>
+                    <a href="mailto:mitdesai9118@gmail.com" className="info-value email-link">
+                      mitdesai9118@gmail.com
+                    </a>
+                  </div>
+                </div>
               </div>
-              <div className="cli-output primary">Bangalore, India</div>
-              
-              <div className="cli-line">
-                <span className="prompt">mit@desai-pc:~$</span> get-email
-              </div>
-              <div className="cli-output primary">mitdesai9118@gmail.com</div>
 
-              <div className="cli-line comment">// open for collaborations</div>
-              <div className="cli-line">
-                <span className="prompt">mit@desai-pc:~$</span> check-status --collab
-              </div>
-              <div className="cli-output">
-                <pre className="json-data">
-{`{
-  "research": "available",
-  "software_dev": "available",
-  "remote": true
-}`}
-                </pre>
+              <div className="contact-info-section">
+                <h3 className="contact-info-title">Collaboration Status</h3>
+                <div className="collab-status-list">
+                  <div className="collab-item">
+                    <span className="collab-bullet green"></span>
+                    <span className="collab-text">Available for AI Research</span>
+                  </div>
+                  <div className="collab-item">
+                    <span className="collab-bullet cyan"></span>
+                    <span className="collab-text">Available for Software Dev</span>
+                  </div>
+                  <div className="collab-item">
+                    <span className="collab-bullet blue"></span>
+                    <span className="collab-text">Open to Remote Work</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
           
-          {/* Right Console: Interactive Form */}
+          {/* Right Panel: Interactive Form */}
           <div className="console-window contact-form-window reveal-on-scroll delay-300">
             <div className="console-header">
               <div className="console-dots">
@@ -56,41 +70,29 @@ const Contact = () => {
                 <span className="console-dot yellow"></span>
                 <span className="console-dot green"></span>
               </div>
-              <div className="console-title">contact.sh</div>
-              <div className="console-status">// write-mode</div>
+              <div className="console-title">send_message</div>
+              <div className="console-status">ready</div>
             </div>
             <div className="console-body form-body">
-              <form onSubmit={(e) => e.preventDefault()}>
-                <div className="cli-line comment">// initialize sender parameters</div>
-                
-                <div className="form-group console-input-group">
-                  <div className="input-prompt">
-                    <span className="prompt">mit@desai-pc:~$</span> export NAME=
-                  </div>
-                  <input type="text" id="name" placeholder='"John Doe"' required />
+              <form onSubmit={(e) => e.preventDefault()} className="simplified-contact-form">
+                <div className="form-group">
+                  <label htmlFor="name" className="form-label">Name</label>
+                  <input type="text" id="name" className="form-input" placeholder="Your name" required />
                 </div>
 
-                <div className="form-group console-input-group">
-                  <div className="input-prompt">
-                    <span className="prompt">mit@desai-pc:~$</span> export EMAIL=
-                  </div>
-                  <input type="email" id="email" placeholder='"john@example.com"' required />
+                <div className="form-group">
+                  <label htmlFor="email" className="form-label">Email Address</label>
+                  <input type="email" id="email" className="form-input" placeholder="Your email address" required />
                 </div>
 
-                <div className="form-group console-input-group">
-                  <div className="input-prompt">
-                    <span className="prompt">mit@desai-pc:~$</span> export MESSAGE=
-                  </div>
-                  <textarea id="message" rows="4" placeholder='"Let me know how we can collaborate..."' required></textarea>
+                <div className="form-group">
+                  <label htmlFor="message" className="form-label">Message</label>
+                  <textarea id="message" rows="4" className="form-input" placeholder="Let me know how we can collaborate..." required></textarea>
                 </div>
 
-                <div className="cli-line comment">// dispatch payload</div>
-                <div className="submit-container">
-                  <span className="prompt">mit@desai-pc:~$</span>
-                  <button type="submit" className="btn btn-primary console-submit-btn">
-                     ./send_message.sh <FaPaperPlane />
-                  </button>
-                </div>
+                <button type="submit" className="btn btn-primary submit-btn">
+                   Send Message <FaPaperPlane />
+                </button>
               </form>
             </div>
           </div>
