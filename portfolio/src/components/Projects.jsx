@@ -27,7 +27,7 @@ const projectsData = [
     description: 'A comprehensive full-stack web application designed for fitness tracking, workout planning, and client progress analytics.',
     tags: ['React', 'Node.js', 'MongoDB', 'Express'],
     file: 'fitex.jsx',
-    github: 'https://github.com/MitDesai9118',
+    github: 'https://github.com/MitDesai9118/fitex-website',
     live: 'https://fitex-website.onrender.com'
   },
   {
