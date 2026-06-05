@@ -68,64 +68,50 @@ const Hero = () => {
             </div>
             
             <div className="console-body">
-              <div className="console-layout">
-                {/* Left side: Clean Profile Details */}
-                <div className="profile-details">
-                  <div className="profile-header">
-                    <h3 className="profile-name">Mit A. Desai</h3>
-                    <p className="profile-role">AI Researcher + Developer</p>
+              {/* Profile Details */}
+              <div className="profile-details">
+                <div className="profile-header">
+                  <h3 className="profile-name">Mit A. Desai</h3>
+                  <p className="profile-role">AI Researcher + Developer</p>
+                </div>
+                
+                <div className="profile-info-list">
+                  <div className="info-item">
+                    <span className="info-label">Location</span>
+                    <span className="info-value">Bangalore, India</span>
                   </div>
-                  
-                  <div className="profile-info-list">
-                    <div className="info-item">
-                      <span className="info-label">Location</span>
-                      <span className="info-value">Bangalore, India</span>
-                    </div>
-                    <div className="info-item">
-                      <span className="info-label">Availability</span>
-                      <span className="info-value">Q3 2026</span>
-                    </div>
-                    <div className="info-item">
-                      <span className="info-label">Status</span>
-                      <span className="info-value status-active">Available</span>
-                    </div>
+                  <div className="info-item">
+                    <span className="info-label">Availability</span>
+                    <span className="info-value">Q3 2026</span>
                   </div>
-                  
-                  <div className="profile-section-title">Core Stack</div>
-                  <div className="stack-tags">
-                    <span className="mini-tag green">Python</span>
-                    <span className="mini-tag cyan">PyTorch</span>
-                    <span className="mini-tag blue">React.js</span>
-                    <span className="mini-tag purple">TensorFlow</span>
-                  </div>
-
-                  <div className="profile-section-title">Direct Links</div>
-                  <div className="contact-tags">
-                    <a href="mailto:mitdesai9118@gmail.com" className="mini-tag green clickable-tag" title="Email: mitdesai9118@gmail.com">
-                      <FaEnvelope className="tag-icon" /> Email
-                    </a>
-                    <a href="https://github.com/MitDesai9118" target="_blank" rel="noreferrer" className="mini-tag cyan clickable-tag" title="GitHub">
-                      <FaGithub className="tag-icon" /> GitHub
-                    </a>
-                    <a href="https://www.linkedin.com/in/mitdesai9118/" target="_blank" rel="noreferrer" className="mini-tag blue clickable-tag" title="LinkedIn">
-                      <FaLinkedin className="tag-icon" /> LinkedIn
-                    </a>
-                    <a href="http://localhost:5000/api/download/resume" download className="mini-tag purple clickable-tag" title="Download Resume">
-                      <FaDownload className="tag-icon" /> Resume
-                    </a>
+                  <div className="info-item">
+                    <span className="info-label">Status</span>
+                    <span className="info-value status-active">Available</span>
                   </div>
                 </div>
                 
-                {/* Right side: Camera Feed (Avatar) */}
-                <div className="console-media">
-                  <div className="camera-feed-label comment">// live_feed</div>
-                  <div className="avatar-wrapper">
-                    <div className="avatar-scanner"></div>
-                    <img src={mitAvatar} alt="Mit A. Desai" className="console-avatar-img" />
-                  </div>
-                  <div className="feed-status">
-                    <span className="status-indicator-dot"></span> live feed
-                  </div>
+                <div className="profile-section-title">Core Stack</div>
+                <div className="stack-tags">
+                  <span className="mini-tag green">Python</span>
+                  <span className="mini-tag cyan">PyTorch</span>
+                  <span className="mini-tag blue">React.js</span>
+                  <span className="mini-tag purple">TensorFlow</span>
+                </div>
+
+                <div className="profile-section-title">Direct Links</div>
+                <div className="contact-tags">
+                  <a href="mailto:mitdesai9118@gmail.com" className="mini-tag green clickable-tag" title="Email: mitdesai9118@gmail.com">
+                    <FaEnvelope className="tag-icon" /> Email
+                  </a>
+                  <a href="https://github.com/MitDesai9118" target="_blank" rel="noreferrer" className="mini-tag cyan clickable-tag" title="GitHub">
+                    <FaGithub className="tag-icon" /> GitHub
+                  </a>
+                  <a href="https://www.linkedin.com/in/mitdesai9118/" target="_blank" rel="noreferrer" className="mini-tag blue clickable-tag" title="LinkedIn">
+                    <FaLinkedin className="tag-icon" /> LinkedIn
+                  </a>
+                  <a href="http://localhost:5000/api/download/resume" download className="mini-tag purple clickable-tag" title="Download Resume">
+                    <FaDownload className="tag-icon" /> Resume
+                  </a>
                 </div>
               </div>
             </div>
